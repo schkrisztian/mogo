@@ -1,0 +1,226 @@
+$primary-font: 'Montserrat';
+$secondory-font: 'Kaushan Script';
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.separator-line{
+    width: 60px;
+    height: 3px;
+    margin: 40px auto 45px auto;
+    background: #f38181;
+}
+
+header{
+    background-image: url('../images/header-bg.png');
+    background-position: center center;
+    height: 100%;
+    background-size: cover;
+    color: #fff ;
+}
+.header-grid{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+
+    .logo{
+        width: 30%;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    nav{
+        width: 70%;
+
+        ul{
+            list-style: none;
+            float: right;
+
+            li{
+                float: left;
+
+                a{
+                    color: #fff;
+                    text-decoration: none;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    margin: 0 25px;
+                }
+            }
+        }
+    }
+}
+
+.header-content{
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2{
+        font-family: 'Kaushan Script';
+        font-size: 72px;
+        margin-bottom: 70px;
+    }
+
+    h1{
+        font-family: $primary-font, sans-serif;
+        font-size: 150px;
+        line-height: 140px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    
+    .line{
+        display: inline-block;
+        width: 60px;
+        height: 3px;
+        background: #fff;
+        margin: 70px auto 50px auto;
+        
+    }
+
+    .header-button{
+        background: transparent;
+        border: 3px solid #fff;
+        padding: 12px 30px;
+        font-family: $primary-font;
+        font-weight: bold;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+}
+
+.header-navigation{
+    display: flex;
+    font-family: $primary-font;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: auto;
+    color: rgba(255,255,255,.7);
+    padding: 30px 0;
+
+    .nav-item{
+        width: calc(4 * 100% / 4);
+        margin-left: 30px;
+
+        .line{
+            width: 100%;
+            height: 3px;
+            background: rgba(255,255,255,.7);;
+            margin-bottom: 25px;
+        }
+        span{
+            font-weight: bold;
+            font-size: 24px;
+        }
+    }
+
+    .nav-item:first-child{ margin-left: 0; }
+
+    .nav-item.active,
+    .nav-item:hover{
+        color: #fff;
+        cursor: pointer;
+    }
+    .nav-item.active .line,
+    .nav-item:hover .line{
+        background: linear-gradient(to right, #f38181 25%, #fff 25%);
+    }
+}
+
+section.about-us{
+    text-align: center;
+    margin: 90px auto 110px auto;
+
+    .title{
+        h2{
+            font-size: 24px;
+            font-family: $secondory-font;
+        }
+        h1{
+            font-family: $primary-font;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase
+        }
+    }
+
+    p{
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+        color: #999999;
+        width: 960px;
+        margin: 0 auto 100px auto;
+    }
+
+    .aboutus-images{
+        display: flex;
+        
+        .box{
+            margin-left: 30px;
+            position: relative;
+            background: #95e1d3;
+            width: 380px;
+            height: 250px;
+
+            img{
+                transition: margin .3s;
+            }
+
+            .box-bg{
+                width: 380px;
+                height: 250px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: all .3s;
+                background: rgb(252,227,138);
+                background: linear-gradient(0deg, rgba(252,227,138,1) 0%, rgba(243,129,129,1) 100%);
+                opacity: 0
+            }
+            
+        }
+
+        .box.active,
+        .box:hover{
+            img{
+                margin-left: -20px;
+                margin-top: -10px;
+                transition: margin .3s;
+                cursor: pointer;
+            }
+
+            .box-bg{
+                margin-left: -10px;
+                margin-top: -10px;
+                z-index: 444;
+                opacity: .9;
+                transition: all .3s;
+            }
+        }
+
+        .box:first-child{ margin-left: 0; }
+    }
+
+}
+
