@@ -20,6 +20,10 @@ $secondory-font: 'Kaushan Script';
     background: #f38181;
 }
 
+.d-flex{
+    display: flex !important;
+}
+
 header{
     background-image: url('../images/header-bg.png');
     background-position: center center;
@@ -153,9 +157,12 @@ section.about-us{
     margin: 90px auto 110px auto;
 
     .title{
+        color: #333333;
+
         h2{
             font-size: 24px;
             font-family: $secondory-font;
+            margin-bottom: 25px;
         }
         h1{
             font-family: $primary-font;
@@ -195,8 +202,18 @@ section.about-us{
                 left: 0;
                 transition: all .3s;
                 background: rgb(252,227,138);
-                background: linear-gradient(0deg, rgba(252,227,138,1) 0%, rgba(243,129,129,1) 100%);
-                opacity: 0
+                background: linear-gradient(0deg, rgba(252,227,138,0.9) 0%, rgba(243,129,129,.9) 100%);
+                opacity: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                font-family: $primary-font;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: #fff;
+                
+                
             }
             
         }
@@ -207,15 +224,17 @@ section.about-us{
                 margin-left: -20px;
                 margin-top: -10px;
                 transition: margin .3s;
-                cursor: pointer;
             }
 
             .box-bg{
                 margin-left: -10px;
                 margin-top: -10px;
                 z-index: 444;
-                opacity: .9;
+                opacity: 1;
                 transition: all .3s;
+                cursor: pointer;
+
+                
             }
         }
 
@@ -224,3 +243,29 @@ section.about-us{
 
 }
 
+
+section.statics{
+    background: #95e1d3;
+
+    .box{
+        width: calc(100% * 1/5);
+        text-align: center;
+        text-transform: uppercase;
+        font-family: $primary-font, sans-serif;
+        font-family: 14px;
+        color: #fff;
+        border-right: 1px solid rgba(255,255,255,.3);
+    padding: 90px 0;
+
+        span{
+            display: block;
+            font-size: 72px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+    }
+
+    .box:last-child{
+        border-right: 0;
+    }
+}

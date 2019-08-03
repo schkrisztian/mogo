@@ -17,6 +17,12 @@
   background: #f38181;
 }
 
+.d-flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
 header {
   background-image: url("../images/header-bg.png");
   background-position: center center;
@@ -174,9 +180,14 @@ section.about-us {
   margin: 90px auto 110px auto;
 }
 
+section.about-us .title {
+  color: #333333;
+}
+
 section.about-us .title h2 {
   font-size: 24px;
   font-family: "Kaushan Script";
+  margin-bottom: 25px;
 }
 
 section.about-us .title h1 {
@@ -222,9 +233,23 @@ section.about-us .aboutus-images .box .box-bg {
   -webkit-transition: all .3s;
   transition: all .3s;
   background: #fce38a;
-  background: -webkit-gradient(linear, left bottom, left top, from(#fce38a), to(#f38181));
-  background: linear-gradient(0deg, #fce38a 0%, #f38181 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, 0.9)), to(rgba(243, 129, 129, 0.9)));
+  background: linear-gradient(0deg, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
   opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+  font-family: "Montserrat";
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 section.about-us .aboutus-images .box.active img,
@@ -233,7 +258,6 @@ section.about-us .aboutus-images .box:hover img {
   margin-top: -10px;
   -webkit-transition: margin .3s;
   transition: margin .3s;
-  cursor: pointer;
 }
 
 section.about-us .aboutus-images .box.active .box-bg,
@@ -241,12 +265,39 @@ section.about-us .aboutus-images .box:hover .box-bg {
   margin-left: -10px;
   margin-top: -10px;
   z-index: 444;
-  opacity: .9;
+  opacity: 1;
   -webkit-transition: all .3s;
   transition: all .3s;
+  cursor: pointer;
 }
 
 section.about-us .aboutus-images .box:first-child {
   margin-left: 0;
+}
+
+section.statics {
+  background: #95e1d3;
+}
+
+section.statics .box {
+  width: calc(100% * 1/5);
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-family: 14px;
+  color: #fff;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 90px 0;
+}
+
+section.statics .box span {
+  display: block;
+  font-size: 72px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+section.statics .box:last-child {
+  border-right: 0;
 }
 /*# sourceMappingURL=style.css.map */
